@@ -4,7 +4,6 @@ export function addTask(tasks, title, status = "todo") {
         id: nextId++,
         title: title.trim(),
         status,
-        createdAt: Date.now(),
     };
     return [...tasks, task];
 }
@@ -21,11 +20,12 @@ export function advanceTask(tasks, id) {
         return { ...task, status: nextStatus };
     });
 }
+export function completeTask(tasks, id) {
+    return tasks.map((task) => task.id === id ? { ...task, status: "done" } : task);
+}
 export function deleteTask(tasks, id) {
     return tasks.filter((task) => task.id !== id);
 }
 export function filterByStatus(tasks, status) {
-    return status === "all"
-        ? tasks
-        : tasks.filter((task) => task.status === status);
+    return tasks.filter((task) => task.status === status);
 }

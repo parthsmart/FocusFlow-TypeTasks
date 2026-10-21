@@ -49,7 +49,8 @@ function statusLabel(status: TaskStatus): string {
 }
 
 function renderTasks(): void {
-  const visibleTasks = filterByStatus(tasks, activeFilter);
+  const visibleTasks =
+    activeFilter === "all" ? tasks : filterByStatus(tasks, activeFilter);
   countElement.textContent = `${visibleTasks.length} ${
     visibleTasks.length === 1 ? "task" : "tasks"
   }`;
