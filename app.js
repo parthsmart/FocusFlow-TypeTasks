@@ -34,7 +34,7 @@ function statusLabel(status) {
             : "Done";
 }
 function renderTasks() {
-    const visibleTasks = filterByStatus(tasks, activeFilter);
+    const visibleTasks = activeFilter === "all" ? tasks : filterByStatus(tasks, activeFilter);
     countElement.textContent = `${visibleTasks.length} ${visibleTasks.length === 1 ? "task" : "tasks"}`;
     if (visibleTasks.length === 0) {
         const emptyState = document.createElement("li");
