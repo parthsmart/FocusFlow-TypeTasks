@@ -25,3 +25,8 @@ The browser loads the generated `app.js`, which imports `model.js`.
 ## Shipping
 
 Push this folder to the same public repository used for Part 1, enable GitHub Pages (or use Netlify/Vercel), and include the repository URL and live URL in the pull request description.
+
+## Published project
+
+- Repository: https://github.com/parthsmart/FocusFlow-TypeTasks
+- Live app: https://parthsmart.github.io/FocusFlow-TypeTasks/
