@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FocusFlow Task Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hero">
+        <p class="eyebrow">TYPE-SAFE PLANNING</p>
+        <h1>FocusFlow</h1>
+        <p class="subtitle">Turn today’s intentions into visible progress.</p>
+      </header>
+
+      <section class="panel" aria-label="Task tracker">
+        <div class="addrow">
+          <label class="sr-only" for="title">Task title</label>
+          <input id="title" type="text" placeholder="What needs your focus?" />
+          <label class="sr-only" for="status">Starting status</label>
+          <select id="status">
+            <option value="todo">To do</option>
+            <option value="in-progress">In progress</option>
+            <option value="done">Done</option>
+          </select>
+          <button id="add" type="button">Add task</button>
+        </div>
+
+        <div class="toolbar">
+          <div id="chips" class="chips" aria-label="Filter tasks"></div>
+          <span id="count" class="count">0 tasks</span>
+        </div>
+
+        <ul id="list" class="task-list"></ul>
+      </section>
+
+      <footer>Built with HTML, CSS, and TypeScript.</footer>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
